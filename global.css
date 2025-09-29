@@ -1,0 +1,24 @@
+/* global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .bg-custom-dark {
+    background-color: #0f102fff;
+  }
+  
+  /* Ensure the custom background applies to the entire page */
+  body {
+    @apply bg-gray-50 dark:bg-custom-dark;
+  }
+  
+  /* Make sure all elements inherit the background */
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
